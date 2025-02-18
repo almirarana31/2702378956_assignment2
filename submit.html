@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPO Charity Helpdesk Ticketing System</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script defer scr="javascript.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Lion's Club Helpdesk Ticketing System</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="submit.html">Submit Ticket</a></li>
+          <li><a href="view.html">View Tickets</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+<section id="submit-ticket">
+  <h2>Submit a Ticket</h2>
+  <form id="ticket-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="category">Category:</label>
+    <select id="category">
+      <option>Technical Issue</option>
+      <option>Donation Inquiry</option>
+      <option>Volunteer Support</option>
+    </select>
+
+    <label for="priority">Priority:</label>
+    <select id="priority">
+      <option>Low</option>
+      <option>Medium</option>
+      <option>High</option>
+      <option>Urgent</option>
+    </select>
+
+    <label for="message">Message:</label>
+    <textarea id="message" required></textarea>
+
+    <button type="submit">Submit Ticket</button>
+  </form>
+</section>
+</main>
