@@ -1,16 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Get counts of tickets from localStorage
   function updateDashboardStats() {
     const tickets = JSON.parse(localStorage.getItem('tickets')) || [];
     
     document.getElementById('total-tickets').querySelector('.stat-number').textContent = tickets.length;
-    
-    // For this simple demo, we'll consider all tickets as "open"
+
     document.getElementById('open-tickets').querySelector('.stat-number').textContent = tickets.length;
     document.getElementById('resolved-tickets').querySelector('.stat-number').textContent = '0';
   }
   
-  // Add mobile menu toggle functionality
   const navToggle = document.createElement('button');
   navToggle.classList.add('nav-toggle');
   navToggle.innerHTML = '☰';
@@ -29,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
       navToggle.innerHTML = '☰';
     }
   });
-  
-  // Initialize dashboard
+
   updateDashboardStats();
 });
