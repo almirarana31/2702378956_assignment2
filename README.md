@@ -14,7 +14,7 @@ The profiles consist of my profile and my teammates profiles.
 
 You can view tickets you have submitted and you can submit tickets are give them severity ratings.
 
-Programming Langugages Used:
+Programming Languages Used:
 - HTML
 - JavaScript
 - CSS
