@@ -74,3 +74,48 @@ button {
 button:hover {
   background-color: #27408b;
 }
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Rating System Styling */
+.rating span {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.rating span.selected {
+  color: #ffd700;
+}
+
+.rating span:hover {
+  color: #ffd700;
+}
+

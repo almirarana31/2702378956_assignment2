@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NPO Charity Helpdesk Ticketing System</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <script defer scr="javascript.js"></script>
+    <script defer src="javascript.js"></script>
   </head>
   <body>
     <header>
@@ -35,18 +35,22 @@
       <option>Volunteer Support</option>
     </select>
 
-    <label for="priority">Priority:</label>
-    <select id="priority">
-      <option>Low</option>
-      <option>Medium</option>
-      <option>High</option>
-      <option>Urgent</option>
-    </select>
+    <label for="rating">Rate the Issue:</label>
+    <div id="rating" class="rating">
+      <span data-value="1">☆</span>
+      <span data-value="2">☆</span>
+      <span data-value="3">☆</span>
+      <span data-value="4">☆</span>
+      <span data-value="5">☆</span>
+    </div>
+    
 
     <label for="message">Message:</label>
     <textarea id="message" required></textarea>
 
     <button type="submit">Submit Ticket</button>
+
+    
   </form>
 </section>
 </main>
