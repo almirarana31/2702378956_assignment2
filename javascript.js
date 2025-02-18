@@ -1,14 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Rating system functionality
   const ratingContainer = document.getElementById('rating');
   
-  if (ratingContainer) {  // Only run this code if we're on a page with ratings
+  if (ratingContainer) {  
     const ratingStars = document.querySelectorAll('#rating span');
     let selectedRating = 0;
     
     ratingStars.forEach(star => {
       star.addEventListener('click', () => {
-        selectedRating = parseInt(star.dataset.value); // Convert string to number
+        selectedRating = parseInt(star.dataset.value);
         updateRatingDisplay(selectedRating);
       });
     });
@@ -24,13 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Form handling
   const ticketForm = document.getElementById('ticket-form');
   
-  if (ticketForm) {  // Only run this code if we're on a page with the form
+  if (ticketForm) { 
     ticketForm.addEventListener('submit', function(event) {
-      event.preventDefault();  // Stop form from submitting normally
-      
+      event.preventDefault();
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
       const category = document.getElementById('category').value;
@@ -63,17 +60,14 @@ document.addEventListener('DOMContentLoaded', function() {
       tickets.push(ticket);
       localStorage.setItem('tickets', JSON.stringify(tickets));
       
-      // Reset form and rating display
       ticketForm.reset();
       updateRatingDisplay(0);
       
-      // Redirect to thank you page
       window.location.href = "thankyou.html";
     });
   }
 });
 
-// Function for any page that needs to access the rating display logic
 function updateRatingDisplay(rating) {
   const ratingStars = document.querySelectorAll('#rating span');
   if (ratingStars) {
