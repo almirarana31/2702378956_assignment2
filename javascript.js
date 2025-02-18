@@ -48,6 +48,6 @@ ticketForm.addEventListener('submit', function(event) {
   ticketForm.reset();
   updateRatingDisplay(0);  
 
-  alert('Ticket submitted successfully!');
-  loadTickets();
+  window.location.href = "thankyou.html";
+
 });
